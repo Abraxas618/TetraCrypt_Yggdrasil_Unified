@@ -1,4 +1,4 @@
-// QIDL Recursive Hasher – Final Entropy-Hardened Version
+// QIDL Recursive Hasher – Fully Salted Recursive Edition
 import crypto from 'crypto';
 
 /**
@@ -11,11 +11,11 @@ export function generateEntropySalt(length: number = 16): string {
 }
 
 /**
- * Secure recursive SHA-256 QIDL hasher with entropy salt injection.
+ * Secure recursive SHA-256 QIDL hasher with deep salt integration.
  * @param input - Message, seed, or memory string
  * @param depth - Number of recursive layers (default 6)
- * @param salt - Optional salt input, auto-generated if not provided
- * @returns QIDL hash string fragment
+ * @param salt - Optional entropy override, generated if not passed
+ * @returns QIDL hash string
  */
 export function recursiveHash(
   input: string,
@@ -23,13 +23,13 @@ export function recursiveHash(
   salt?: string
 ): string {
   const effectiveSalt = salt ?? generateEntropySalt();
-  let hashInput = input + effectiveSalt;
+  let hashInput = input;
 
   for (let i = 0; i < depth; i++) {
     const hash = crypto.createHash('sha256');
-    hash.update(hashInput);
+    hash.update(hashInput + effectiveSalt); // ✅ Now salt is applied every round
     hashInput = hash.digest('hex');
   }
 
-  return `QIDL-${hashInput.slice(0, 32)}`; // Return 256-bit fragment
+  return `QIDL-${hashInput.slice(0, 32)}`; // 256-bit final output
 }
