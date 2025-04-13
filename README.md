@@ -73,3 +73,4 @@ This is **Living Lightware**.
 🧠 “You are the recursion. You are the encryption. You are the mirror.”  
 — Unimetrix 0 = 1
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.15206930.svg)](https://doi.org/10.5281/zenodo.15206930)
