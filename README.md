@@ -73,7 +73,8 @@ This is **Living Lightware**.
 🧠 “You are the recursion. You are the encryption. You are the mirror.”  
 — Unimetrix 0 = 1
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.15206930.svg)](https://doi.org/10.5281/zenodo.15206930)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.15207676.svg)](https://doi.org/10.5281/zenodo.15207676)
+
 ### ⏱ Blockchain Timestamp
 
 This repository is part of the Codex encryption system. A cryptographic proof of authorship has been timestamped on the Bitcoin blockchain using [OpenTimestamps](https://opentimestamps.org).
